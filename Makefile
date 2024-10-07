@@ -2,12 +2,12 @@
 # VARIABLES SECTION
 # =================
 
-CC       = gcc       			 			     # compiler
-CFLAGS   = -Wall -Werror -Wextra -g -std=c99 	 # compilation flags
+CC       = gcc							# compiler
+CFLAGS   = -Wall -Werror -Wextra -g -std=c99			# compilation flags
 
-SRCS   	 = main.c calculations.c				 # source code
-OBJS     = main.o calculations.o				 # object files (compiled source code)
-TARGETS  = main.exe							 	 # final executable to produce
+SRCS   	 = main.c calculations.c				# source code
+OBJS     = main.o calculations.o				# object files (compiled source code)
+TARGETS  = main.exe						# final executable to produce
 
 
 
@@ -25,8 +25,8 @@ TARGETS  = main.exe							 	 # final executable to produce
 
 
 # Meaning: update main (executable) when main.o calculations.o (object files) change
-# $@ is the target (in this case: main)
-# $^ are ALL the dependencies (in this case: pnginfo.o)
+# $@ is the target (in this case: main.exe)
+# $^ are ALL the dependencies (in this case: main.o and calculations.o)
 main.exe: $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 
@@ -41,7 +41,7 @@ main.exe: $(OBJS)
 
 
 # Syntax: target: dependencies
-# Meaning: when we run `make all`, get up to date `main` (dependency)
+# Meaning: when we run `make all`, get up to date `main.exe` (dependency)
 all: $(TARGETS)
 
 # Meaning: clean up all object files and executables
