@@ -1,9 +1,0 @@
-{
-    "makefile.launchConfigurations": [
-        {
-            "cwd": "/home/mdvmlhtr/Documents/makefile-simplified",
-            "binaryPath": "/home/mdvmlhtr/Documents/makefile-simplified/main.exe",
-            "binaryArgs": ["20", "10"]
-        }
-    ]
-}
