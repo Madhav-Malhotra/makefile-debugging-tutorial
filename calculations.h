@@ -1,0 +1,1 @@
+int squared_difference(int a, int b);
